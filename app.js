@@ -1,9 +1,15 @@
 const express = require('express');
 const app = express();
 
+//import Morgan middleware package (login package)
+const morgan = require('morgan');
+
+
+app.use(morgan('dev'));
+
+
 //import products routes
 const productRoutes = require('./api/routes/products');
-// "filter for products" -- Anything starting /products url will funnel into our product route (product.js)
 app.use('/products', productRoutes);
 
 //import orders routes

@@ -2,16 +2,16 @@
 const express = require('express');
 const router = express.Router();
 
-//GET Orders
+//Handle incoming GET request for Orders
 router.get( '/', (req, res, next) => {
-  res.status(201).json({
+  res.status(200).json({
     message: 'Orders were fetched'
   });
 });
 
-//POST orders
+//Handle incoming POST request for Orders
 router.post( '/', (req, res, next) => {
-  res.status(200).json({
+  res.status(201).json({
     message: 'Order was created'
   });
 });
